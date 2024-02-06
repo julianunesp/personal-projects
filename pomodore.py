@@ -10,7 +10,7 @@ os = 'mac' #acceptable os: mac, win
 current_time=strftime("%H:%M")
 push_safer_private_key='' #https://www.pushsafer.com/en/python
 
-def locks_creen(os):
+def lock_screen(os):
     if os == 'mac':
         login = CDLL('/System/Library/PrivateFrameworks/login.framework/Versions/Current/login')
         result = login.SACLockScreenImmediate()
@@ -42,7 +42,7 @@ while longrest != 3:
             print('Walk around!!! Go out and see the day!!!')
             sleep(2)
 
-            locks_creen(os)
+            lock_screen(os)
 
             sleep(60*5) #5 minutes of rest
             notify_iphone()
@@ -56,7 +56,7 @@ while longrest != 3:
     print(f'15\' rest shift has started...\nDon\'t just check your social media !!!!\n{"*"*80}\n')
     sleep(2)
 
-    locks_creen(os)
+    lock_screen(os)
     
     sleep(60*15) #15 minutes of rest
     notify_iphone()
